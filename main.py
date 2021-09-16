@@ -114,7 +114,7 @@ def compare_search(sizes=[1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]):
 	for i in sizes:
 
 		list_to_search = []
-		for j in range(i):
+		for j in range(int(i)):
 			list_to_search.append(j)
 
 		linear_time = time_search(linear_search, list_to_search, key)
@@ -141,5 +141,5 @@ def test_compare_search():
 	assert res[1][1] < 1
 
 print(test_compare_search())
+print_results(compare_search())
 #test_binary_search()
-

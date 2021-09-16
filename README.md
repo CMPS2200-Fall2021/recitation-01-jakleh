@@ -22,13 +22,23 @@
 
 - [Done!] 8. Call `print_results(compare_search())` and paste the results here:
 
-**TODO:[(10, 0.023193359375, 0.003173828125), (100, 0.0048828125, 0.005126953125)]**
+**TODO:
+|            n |   linear |   binary |
+|--------------|----------|----------|
+|       10.000 |    0.002 |    0.002 |
+|      100.000 |    0.006 |    0.004 |
+|     1000.000 |    0.043 |    0.003 |
+|    10000.000 |    0.450 |    0.011 |
+|   100000.000 |    4.475 |    0.013 |
+|  1000000.000 |   51.063 |    0.022 |
+| 10000000.000 |  582.271 |    0.027 |
+**
 
 - [Done!] 9. The theoretical worst-case running time of linear search is $O(n)$ and binary search is $O(log_2(n))$. Do these theoretical running times match your empirical results? Why or why not?
 
-**TODO: No. If they did, then binary search would consistently take less time than linear search for large n. However, the opposite is true: Binary search consistently beats linear for n=10 [by a large margin] while they take turns for n=100.**
+**TODO: Yes. Binary search consistently takes less time than linear search for large n.**
 
 - [Done!] 10. Binary search assumes the input list is already sorted. Assume it takes $\Theta(n^2)$ time to sort a list of length $n$. Suppose you know ahead of time that you will search the same list $k$ times. 
-  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? **TODO: O(n^2 + k * n)**
+  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? **TODO: O(k * n)**
   + For binary search? **TODO: O(n^2 + k * log_2(n))**
   + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? **TODO: The values of k for which (n^2)/(n-log_2(n)) - k < 0. So, k must be greater than (n^2)/(n-log_2(n)).**
